@@ -8,9 +8,10 @@ using UnityEngine;
 
 public class StalactiteSpawner : MonoBehaviour
 {
-	public List<GameObject> estalacPrefabs = new List<GameObject>;
-	private List<GameObject> tempEstalacPrefabs = new List<GameObject>;
-	public List<Transform> estalacTransforms = new List<GameObject>;
+	private const int NUM_ESTALACS = 4;
+	public List<GameObject> estalacPrefabs = new List<GameObject>(NUM_ESTALACS);
+	private List<GameObject> tempEstalacPrefabs = new List<GameObject>(NUM_ESTALACS);
+	public List<Transform> estalacTransforms = new List<GameObject>(NUM_ESTALACS);
 
 	public float distanciaGeracaoX = 5.1f;
 	public float distanciaGeracaoY = 5.1f;
@@ -19,7 +20,7 @@ public class StalactiteSpawner : MonoBehaviour
 	private Transform transf;
 	private bool destroyed = true;
 	private Animator anim;
-	private const NUM_ESTALACS = 4;
+	
 
 	//public ShakeCamera shake;
 
